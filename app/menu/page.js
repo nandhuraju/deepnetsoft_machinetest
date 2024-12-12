@@ -54,7 +54,7 @@ export default function Menu() {
                 key={menu._id}
                 className={`px-4 py-2 rounded-md shadow-md ${
                   selectedMenuId === menu._id
-                    ? "bg-blue-500 text-white"
+                    ? "bg-gray-500 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
                 onClick={() => setSelectedMenuId(menu._id)}
@@ -103,7 +103,7 @@ export default function Menu() {
                   />
                   <h3 className="font-semibold text-lg">{item.name}</h3>
                   <p className="text-gray-600">{item.description}</p>
-                  <p className="font-bold text-blue-500 mt-2">₹{item.price}</p>
+                  <p className="font-bold text-gray-500 mt-2">₹{item.price}</p>
                 </div>
               ))}
             </div>

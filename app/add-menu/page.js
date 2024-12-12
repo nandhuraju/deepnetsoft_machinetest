@@ -32,7 +32,7 @@ export default function AddMenu() {
             placeholder="Menu Name"
             value={newMenu.name}
             onChange={(e) => setNewMenu({ ...newMenu, name: e.target.value })}
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-blue-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           />
         </div>
         <div className="mb-4">
@@ -42,12 +42,12 @@ export default function AddMenu() {
             onChange={(e) =>
               setNewMenu({ ...newMenu, description: e.target.value })
             }
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-blue-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           ></textarea>
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md w-full hover:bg-blue-600"
+          className="bg-gray-500 text-white px-4 py-2 rounded-md w-full hover:bg-gray-600"
         >
           Add Menu
         </button>
