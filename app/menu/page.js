@@ -1,4 +1,5 @@
-"use client";
+"use client"; // Ensures the component works as a client-side component
+
 import { useState, useEffect, useRef } from "react";
 
 export default function Menu() {
@@ -47,7 +48,9 @@ export default function Menu() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
         {/* Menus */}
         <div className="mb-6 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg max-w-3xl w-full">
-          <h1 className="text-xl font-semibold mb-4 text-center">MENU</h1>
+          <h1 className="text-4xl font-semibold mb-6 text-center text-gray-800">
+            MENU
+          </h1>
           <div className="flex flex-wrap justify-center gap-4">
             {menus.map((menu) => (
               <button
@@ -65,13 +68,18 @@ export default function Menu() {
           </div>
         </div>
 
-        {/* Items */}
+        {/* Description of the Selected Menu */}
         {selectedMenuId && (
-          <div className="relative bg-white bg-opacity-90 p-4 rounded-lg shadow-md max-w-4xl w-full mx-auto">
-            <h2 className="text-xl font-semibold mb-4 text-center">
-              Items for Selected Menu
-            </h2>
+          <div className="relative bg-white bg-opacity-90 p-6 rounded-lg shadow-md max-w-4xl w-full mx-auto mt-6">
+            <p className="text-gray-700 text-lg text-center">
+              {menus.find((menu) => menu._id === selectedMenuId)?.description}
+            </p>
+          </div>
+        )}
 
+        {/* Items for the selected menu */}
+        {selectedMenuId && (
+          <div className="relative bg-white bg-opacity-90 p-4 rounded-lg shadow-md max-w-4xl w-full mx-auto mt-6">
             {/* Arrows for scrolling */}
             <button
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none"

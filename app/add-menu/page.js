@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import from next/navigation
 
 export default function AddMenu() {
   const [newMenu, setNewMenu] = useState({ name: "", description: "" });
+  const router = useRouter(); // Initialize useRouter for navigation
 
   // Add a new menu
   const addMenu = async (e) => {
@@ -20,6 +22,11 @@ export default function AddMenu() {
     } else {
       alert(`Error: ${createdMenu.message}`);
     }
+  };
+
+  // Navigate to the Add Item page
+  const goToAddItem = () => {
+    router.push("/add-item"); // Navigates to /add-item
   };
 
   return (
@@ -52,6 +59,16 @@ export default function AddMenu() {
           Add Menu
         </button>
       </form>
+
+      {/* Add Item Button */}
+      <div className="mt-6 text-center">
+        <button
+          onClick={goToAddItem}
+          className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+        >
+          Add Item
+        </button>
+      </div>
     </div>
   );
 }

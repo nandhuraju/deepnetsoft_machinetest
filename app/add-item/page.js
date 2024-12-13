@@ -74,7 +74,7 @@ export default function AddItem() {
             placeholder="Item Name"
             value={newItem.name}
             onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-green-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           />
         </div>
         <div className="mb-4">
@@ -85,7 +85,7 @@ export default function AddItem() {
             onChange={(e) =>
               setNewItem({ ...newItem, description: e.target.value })
             }
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-green-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           ></textarea>
         </div>
         <div className="mb-4">
@@ -95,7 +95,7 @@ export default function AddItem() {
             placeholder="Price"
             value={newItem.price}
             onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-green-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           />
         </div>
         <div className="mb-4">
@@ -107,12 +107,12 @@ export default function AddItem() {
             onChange={(e) =>
               setNewItem({ ...newItem, imageUrl: e.target.value })
             }
-            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-green-500"
+            className="border rounded-md p-2 w-full focus:ring-2 focus:ring-gray-500"
           />
         </div>
         <button
           type="submit"
-          className="bg-green-500 text-white p-2 rounded-md w-full hover:bg-green-600"
+          className="bg-gray-500 text-white p-2 rounded-md w-full hover:bg-gray-600"
         >
           Add Item
         </button>
